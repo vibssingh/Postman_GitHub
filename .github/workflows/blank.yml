@@ -39,7 +39,7 @@ jobs:
       # Run newman cli
       - name: Run Newman
         run: |
-          newman run "collection_scripts/API_Newman_PassedTests.json" -r htmlextra
+          newman run ${{GITHUB_WORKSPACE}}/API_Newman_PassedTests.json -r htmlextra
      
       # Upload test results to workspace
       - name: Upload Results
